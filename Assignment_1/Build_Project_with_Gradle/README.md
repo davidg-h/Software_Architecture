@@ -1,0 +1,1 @@
+# build a java application with gradle by following [this tutorial](https://docs.gradle.org/current/samples/sample_building_java_applications.html)
