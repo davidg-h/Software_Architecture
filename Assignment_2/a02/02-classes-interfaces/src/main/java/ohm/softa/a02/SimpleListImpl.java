@@ -5,40 +5,63 @@ import java.util.Iterator;
  * @author Peter Kurfer
  * Created on 10/6/17.
  */
-public class SimpleListImpl implements SimpleList {
-    Element head;
-    Element tail;
+public class SimpleListImpl implements SimpleList, Iterable<Object> {
+    // TODO: Implement the required methods.
+    private Element headElem;
+    private int size;
 
-    public SimpleListImpl(){
-        head = null;
-        tail = head;
+    public SimpleListImpl()
+    {
+        headElem = null;
+        size = 0;
     }
+
+    @Override
+    public Iterator<Object> iterator() {
+        return new SimpleIteratorImpl(headElem);
+    }
+
     @Override
     public void add(Object o) {
+        Element newElem = new Element(o, null);
 
+        if (headElem != null){
+            Element current = headElem;
+            while (current.getNext() != null){
+                current = current.getNext();
+            }
+            current.setNext(newElem);
+            size++;
+            return;
+        }
+        headElem = newElem;
+        size = 1;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public SimpleList filter(SimpleFilter filter) {
-        return null;
+        SimpleList result = new SimpleListImpl();
+        for (Object o : this)
+        {
+            if(filter.include(o)){
+                result.add(o);
+            }
+        }
+        return result;
     }
 
-    @Override
-    public boolean include(Object item) {
-        return false;
-    }
 
-    // TODO: Implement the required methods.
+    //region private classes (Elements, Iterator)
 
-    // inner class is static so it wont need the outer class to be accessed and private so access is limited
+    // inner class is static, so it won't need the outer class to be accessed and private so access is limited to only the list
     private static class Element {
-        Object item;
-        Element next;
+        private final Object item;
+        private Element next;
 
         Element(Object item, Element next){
             this.item = item;
@@ -53,11 +76,12 @@ public class SimpleListImpl implements SimpleList {
             return next;
         }
 
-        public void setNext(Element next) {
+        void setNext(Element next) {
             this.next = next;
         }
     }
 
+    // non-static because it is an iterator of the list and so a part of the list
     private class SimpleIteratorImpl implements Iterator<Object>{
         Element cur;
 
@@ -71,9 +95,10 @@ public class SimpleListImpl implements SimpleList {
 
         @Override
         public Object next() {
-            Element next = cur.next;
-            cur = cur.next;
-            return next.item;
+            Object tmp = cur.getItem();
+            cur = cur.getNext();
+            return tmp;
         }
     }
+    //endregion
 }
