@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Assignment_1/Build_Project_with_Gradle" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-8.0.2" />
+        <option name="gradleJvm" value="azul-15" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Assignment_1/Build_Project_with_Gradle" />
+            <option value="$PROJECT_DIR$/Assignment_1/Build_Project_with_Gradle/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Assignment_1/a01" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-8.0.2" />
+        <option name="gradleJvm" value="azul-15" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Assignment_1/a01" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Assignment_2/a02/02-classes-interfaces" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-8.0.2" />
+        <option name="gradleJvm" value="azul-15" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Assignment_2/a02/02-classes-interfaces" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Assignment_3/03-inheritance" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-8.0.2" />
+        <option name="gradleJvm" value="azul-15" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Assignment_3/03-inheritance" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
