@@ -19,9 +19,6 @@ public class Cat {
 
     private final String name;
 
-    private int time = 0;
-    private int timeDigesting = 0;
-
     public Cat(String name, int sleep, int awake, int digest) {
         this.name = name;
         this.sleep = sleep;
@@ -46,7 +43,6 @@ public class Cat {
 
         // change state and reset the timer
         state = ((HungryState) state).feed(this);
-        timeDigesting = 0;
     }
 
     public boolean isAsleep() {

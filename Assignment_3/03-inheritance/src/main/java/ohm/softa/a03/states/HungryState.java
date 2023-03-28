@@ -10,7 +10,7 @@ public class HungryState extends State{
     }
 
     public State feed(Cat cat){
-        return new DigestingState(cat.getDigest(), cat.getAwake() - getDuration());
+        return new DigestingState(cat.getDigest(), getDuration() - getTime());
     }
 
     @Override
