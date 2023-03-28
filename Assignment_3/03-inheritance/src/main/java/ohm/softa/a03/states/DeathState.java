@@ -6,6 +6,7 @@ import ohm.softa.a03.State;
 public class DeathState extends State {
     protected DeathState() {
         super(1);
+        logger.info("death");
     }
 
     @Override

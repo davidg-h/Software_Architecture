@@ -18,7 +18,7 @@ public abstract class State {
         t++;
 
         if (t < duration){
-            logger.info("Still in state:");
+            logger.info("Still in state: " + getClass().getSimpleName());
             return this;
         } else {
             return successor(cat);

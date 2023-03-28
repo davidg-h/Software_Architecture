@@ -7,6 +7,7 @@ public class SleepingState extends State {
 
     public SleepingState(int duration){
         super(duration);
+        logger.info("sleeping");
     }
     @Override
     protected State successor(Cat cat) {

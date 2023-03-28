@@ -6,6 +6,7 @@ import ohm.softa.a03.State;
 public class PlayfulState extends State {
     protected PlayfulState(int duration) {
         super(duration);
+        logger.info("playful");
     }
 
     @Override

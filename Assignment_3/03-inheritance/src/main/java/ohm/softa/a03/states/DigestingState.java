@@ -10,6 +10,7 @@ public class DigestingState extends State {
     protected DigestingState(int duration, int remainingAwakeTime) {
         super(duration);
         this.remainingAwakeTime = remainingAwakeTime;
+        logger.info("digesting");
     }
 
     @Override

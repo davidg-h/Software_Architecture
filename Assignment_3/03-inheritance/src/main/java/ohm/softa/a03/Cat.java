@@ -33,46 +33,6 @@ public class Cat {
 
     public void tick() {
         state = state.tick(this);
-        /*logger.info("tick()");
-        time = time + 1;
-
-        switch (state) {
-            case SLEEPING:
-                if (time == sleep) {
-                    logger.info("Yoan... getting hungry!");
-                    state = HUNGRY;
-                    time = 0;
-                }
-                break;
-            case HUNGRY:
-                if (time == awake) {
-                    logger.info("I've starved for a too long time...good bye...");
-                    state = DEAD;
-                }
-                break;
-            case DIGESTING:
-                timeDigesting = timeDigesting + 1;
-                if (timeDigesting == digest) {
-                    logger.info("Getting in a playful mood!");
-                    state = PLAYFUL;
-                }
-                break;
-            case PLAYFUL:
-                if (time >= awake) {
-                    logger.info("Yoan... getting tired!");
-                    state = SLEEPING;
-                    time = 0;
-                }
-                break;
-
-            case DEAD:
-                break;
-            default:
-                throw new IllegalStateException("Unknown cat state " + state.name());
-        }
-
-        logger.info(state.name());
-*/
     }
 
     /**
