@@ -4,8 +4,6 @@ import ohm.softa.a03.states.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import ohm.softa.a03.State;
-
 public class Cat {
     private static final Logger logger = LogManager.getLogger();
 
@@ -64,7 +62,6 @@ public class Cat {
     public boolean isDead() {
         return state instanceof DeathState;
     }
-
 
     public int getSleep() {
         return sleep;
