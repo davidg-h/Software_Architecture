@@ -1,0 +1,45 @@
+@startuml
+package java.lang {
+    
+    interface Iterable<T> {
+        +iterator(): Iterator<T>
+    }
+
+    interface Iterator<T> {
+        +hasNext(): boolean
+        +next(): T
+    }
+}
+
+package ohm.softa.a04 {
+        interface SimpleFilter<T> {
+            +include(item: T): boolean
+        }
+
+        interface SimpleList<T> extends Iterable {
+            +add(item: T)
+            +addDefault(???)
+            +size(): int
+            +filter(filter: SimpleFilter<T>): SimpleList<T>
+        }
+
+        class SimpleListImpl<T> implements SimpleList {
+           -head: ListElement<T>
+        }
+
+        class SimpleIterator implements Iterator {
+        }
+
+        -class ListElement<T> {
+            -item: T
+            -next: ListElement<T>
+    
+            +getItem(): T
+            +getNext(): ListElement<T>
+            +setNext(e: ListElement<T>)
+        }
+
+        SimpleListImpl +-- ListElement
+        ListElement --* SimpleListImpl
+    }
+@enduml

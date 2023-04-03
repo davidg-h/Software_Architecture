@@ -1,0 +1,22 @@
+@startuml
+
+package java.lang {
+
+    +interface Iterable<T> {
+        +iterator(): Iterator<T>
+    }
+}
+
+package ohm.softa.a04 {
+    +interface SimpleList<T> extends Iterable {
+        +add(item: T)
+        +addDefault(???)
+        +size(): int
+        +default filter(filter: SimpleFilter<T>): SimpleList<T>
+        +default <R> map(Function<T, R> transform): SimpleList<R>
+    }
+    +abstract class CollectionsUtility {
+        +{static}<T> sort(SimpleList<T> list, Comparator<T> cmp): SimpleList<T>
+    }
+}
+@enduml
