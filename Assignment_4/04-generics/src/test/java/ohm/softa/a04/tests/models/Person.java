@@ -42,7 +42,7 @@ public class Person {
     public boolean equals(Object o) {
         if (this == o) return true;
 
-        if (!(o instanceof Person)) return false; //TODO why check for instance and cast below
+        if (!(o instanceof Person)) return false;
 
         Person person = (Person) o;
 

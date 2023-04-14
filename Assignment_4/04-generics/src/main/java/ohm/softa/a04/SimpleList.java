@@ -22,24 +22,23 @@ public interface SimpleList<T> extends Iterable<T> {
      * @return a new, filtered list
      */
     default SimpleList<T> filter(SimpleFilter<T> filter) {
-        SimpleList<T> result ;//= (SimpleList<T>) new SimpleListImpl<T>(); TODO 1: possible too?
+        SimpleList<T> result;
 
         try {
-            result = (SimpleList<T>) getClass().getDeclaredConstructor().newInstance(); //TODO -> 1
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
-                 NoSuchMethodException e) {
+            result = (SimpleList<T>) getClass().getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
             result = new SimpleListImpl<>();
         }
 
-        for (T o : this) {
-            if (filter.include(o)) {
-                result.add(o);
+        for (T object : this) {
+            if (filter.include(object)) {
+                result.add(object);
             }
         }
         return result;
     }
 
-    default <R> SimpleList<R> map(Function<T, R> transform) { //TODO type params (use arguments and return type example)
+    default <R> SimpleList<R> map(Function<T, R> transform) {
         SimpleList<R> result;
         try {
             result = (SimpleList<R>) this.getClass().getDeclaredConstructor().newInstance();

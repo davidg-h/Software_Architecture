@@ -63,7 +63,7 @@ public class SimpleListImpl<T> implements SimpleList<T> {
 		@Override
 		public boolean hasNext() {
 			return current != null;
-		} //TODO why not check current.next != null (same effect)?
+		}
 
 		/**
 		 * @inheritDoc
