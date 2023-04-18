@@ -1,0 +1,35 @@
+@startuml
+package java.lang {
+    
+    interface Comparable<T> {
+        +compareTo(other: T): int
+    }
+}
+
+package ohm.softa.a05.model {
+        +enum PlantColor {
+            GREEN,
+            YELLOW,
+            RED,
+            BLUE,
+            ORANGE
+        }
+
+        +abstract class Plant implements Comparable {
+            -height: double
+            -family: String
+            -name: String
+
+            +getHeight(): double
+            +getFamily(): String
+            +getName(): String
+            +{abstract} getColor(): PlantColor
+        }
+
+        +class Flower extends Plant {
+        }
+
+        +class Shrub extends Plant{
+        }
+    }
+@enduml

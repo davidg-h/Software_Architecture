@@ -1,0 +1,12 @@
+@startuml
+package ohm.softa.a05 {
+
+    +class PlantBed<T> {
+        -plants: SimpleList<T>
+
+        +add(plant: T)
+        +size(): int
+        +getPlantsByColor(color: PlantColor): SimpleList<T>
+    }
+}
+@enduml
