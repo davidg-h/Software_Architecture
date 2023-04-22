@@ -1,5 +1,7 @@
 package ohm.softa.a05.collections;
 
+import ohm.softa.a05.model.PlantColor;
+
 /**
  * @author Peter Kurfer
  * Created on 10/6/17.
