@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Flower extends Plant{
     private final PlantColor color;
-    protected Flower(double height, String family, String name, PlantColor color) {
+    public Flower(String name, String family, double height, PlantColor color) {
         super(height, family, name);
         /* ensure that a flower is never green */
         if(color == PlantColor.GREEN){

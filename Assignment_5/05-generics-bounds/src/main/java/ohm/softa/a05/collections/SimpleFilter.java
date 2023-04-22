@@ -10,7 +10,7 @@ import ohm.softa.a05.model.PlantColor;
 public interface SimpleFilter<T> {
 
 	/**
-	 * Determines if a item matches a condition
+	 * Determines if an item matches a condition
 	 *
 	 * @param item Object to evaluate
 	 * @return true if the referenced object should be included.
