@@ -1,7 +1,7 @@
 package ohm.softa.a05.model;
 
 public class Shrub extends Plant{
-    protected Shrub(double height, String family, String name) {
+    public Shrub(String name, String family, double height) {
         super(height, family, name);
     }
 
