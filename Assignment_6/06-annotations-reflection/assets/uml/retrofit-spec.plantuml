@@ -1,0 +1,16 @@
+@startuml
+!theme vibrant
+package ohm.softa.a06 as P1 {
+
+    +interface CNJDBApi {
+        getRandomJoke(): Call<Joke>
+        getRandomJoke(categories: String[]): Call<Joke>
+        getJokesBySearch(query: String): Call<Joke[]>
+        getJoke(id: String): Call<Joke>
+    }
+
+    +class App {
+        +{static} main(args: String[]): void
+    }
+}
+@enduml

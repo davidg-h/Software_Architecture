@@ -1,0 +1,18 @@
+@startuml
+!theme vibrant
+package de.thro.inf.prg3.a06.model as P1 {
+    +class Joke {
+
+        -identifier: String
+        -content: String
+        -rubrics: String[]
+
+        +getIdentifier(): String
+        +setIdentifier(identifier: String): void
+        +getContent(): String
+        +setContent(content: String): void
+        +getRubrics(): String[]
+        +setRubrics(rubrics: String[]): void
+    }
+}
+@enduml
