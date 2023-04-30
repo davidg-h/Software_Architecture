@@ -1,5 +1,6 @@
 package ohm.softa.a06.model;
 
+import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -12,18 +13,39 @@ import java.util.List;
  * Created on 11/9/17.
  */
 public final class Joke {
-
+	@SerializedName("id")
 	private String identifier;
+	@SerializedName("value")
 	private String content;
+	@SerializedName("categories")
 	private List<String> rubrics;
 
+	public Joke() {
+		identifier = "";
+		content = "Not correctly deserialized";
+		rubrics = new LinkedList<>();
+	}
 
 	public String getIdentifier() {
 		return identifier;
 	}
 
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+	}
+
 	public String getContent() {
 		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public List<String> getRubrics() {return rubrics;}
+
+	public void setRubrics(List<String> rubrics) {
+		this.rubrics = rubrics;
 	}
 
 	@Override
