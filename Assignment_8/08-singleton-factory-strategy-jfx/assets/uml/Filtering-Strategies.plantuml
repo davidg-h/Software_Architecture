@@ -1,0 +1,26 @@
+@startuml FilteringStrategies
+
+package ohm.softa.a08.filtering {
+
+    interface MealsFilter {
+        filter(meals: List<Meal>): List<Meal>
+    }
+
+    class NoFilter implements MealsFilter {
+
+    }
+
+    abstract class FilterBase implements MealsFilter {
+        #include(m: Meal): boolean
+    }
+
+    class CategoryFilter extends FilterBase {
+
+    }
+
+    class NotesFilter extends FilterBase {
+
+    }
+}
+
+@enduml

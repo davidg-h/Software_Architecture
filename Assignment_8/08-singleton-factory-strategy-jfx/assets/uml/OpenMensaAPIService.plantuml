@@ -1,0 +1,24 @@
+@startuml OpenMensaAPIService
+
+left to right direction
+
+package ohm.softa.a08 {
+
+    interface OpenMensaAPI {
+        getMeals(date: String): Call<List<Meal>>
+    }
+
+    package services {
+        class OpenMensaAPIService {
+            -{static} instance: OpenMensaAPIService
+            -mensaApiInstance: OpenMensaAPI
+            -OpenMensaAPIService()
+            +{static} getInstance(): OpenMensaAPIService
+            +getApi(): OpenMensaAPI
+        }
+    }
+
+    OpenMensaAPIService o-- OpenMensaAPI
+}
+
+@enduml
