@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ohm.softa.a09.controller.MainController">
+	<columnConstraints>
+		<ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="355.0" />
+		<ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="345.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints minHeight="10.0" vgrow="NEVER" />
+		<RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+		<RowConstraints maxHeight="269.0" minHeight="10.0" prefHeight="152.0" vgrow="NEVER" />
+	</rowConstraints>
+	<ToggleButton fx:id="generationToggleBtn" mnemonicParsing="false" onAction="#handleToggleFighterGeneration" text="Start" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+		<GridPane.margin>
+			<Insets bottom="10.0" right="10.0" top="10.0" />
+		</GridPane.margin>
+	</ToggleButton>
+	<AreaChart fx:id="memoryChart" GridPane.columnSpan="2" GridPane.rowIndex="2">
+		<xAxis>
+			<NumberAxis side="BOTTOM" />
+		</xAxis>
+		<yAxis>
+			<NumberAxis side="LEFT" />
+		</yAxis>
+	</AreaChart>
+	<TableView fx:id="lightSideTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+		<columns>
+			<TableColumn fx:id="lightSideFighterImageColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Fighter image" />
+			<TableColumn fx:id="lightSideFighterPilotColumn" editable="false" maxWidth="Infinity" minWidth="150" prefWidth="-1.0" sortable="false" text="Pilot name" />
+		</columns>
+	</TableView>
+	<TableView fx:id="darkSideTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+		<columns>
+			<TableColumn fx:id="darkSideFighterImageColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" sortable="false" text="Fighter image" />
+			<TableColumn fx:id="darkSideFighterPilotColumn" editable="false" maxWidth="Infinity" minWidth="150" prefWidth="-1.0" sortable="false" text="Pilot name" />
+		</columns>
+	</TableView>
+</GridPane>

@@ -1,0 +1,19 @@
+@startuml
+
+left to right direction
+
+package ohm.softa.a09.resource {
+
+	class FxImageLoaderAdapter {
+		- resourceLoader: ResourceLoader<Image>
+		+ loadImage(resourcePath: String)
+		+ loadImage(resourceContext: ClassLoader, resourcePath: String)
+	}
+
+	class ResourceLoader<T> {
+		+ loadResource(resourceContext: ClassLoader, path: String): T
+	}
+
+	FxImageLoaderAdapter *-- ResourceLoader
+}
+@enduml
