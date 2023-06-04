@@ -1,0 +1,18 @@
+@startuml Cook
+
+package java.lang {
+    interface Runnable {
+        run();
+    }
+}
+
+package ohm.softa.a10.kitchen.workers {
+    +class Cook implements Runnable {
+        -name: String
+        -progressReporter: ProgressReporter
+        -kitchenHatch: KitchenHatch
+        +Cook(name: String, kitchenHatch: KitchenHatch, progressReporter: ProgressReporter)
+    }
+}
+
+@enduml

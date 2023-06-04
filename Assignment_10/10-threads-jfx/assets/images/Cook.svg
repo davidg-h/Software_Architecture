@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="300px" preserveAspectRatio="none" style="width:551px;height:300px;background:#FFFFFF;" version="1.1" viewBox="0 0 551 300" width="551px" zoomAndPan="magnify"><defs><filter height="300%" id="fx3l3a9xzp7dw" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[aa8f7b917213fcc1c2766e2d59b49067]
+cluster java.lang--><polygon fill="#FFFFFF" filter="url(#fx3l3a9xzp7dw)" points="216,6,285,6,292,28.4883,334,28.4883,334,118,216,118,216,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="216" x2="292" y1="28.4883" y2="28.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="63" x="220" y="21.5352">java.lang</text><!--MD5=[cdf6dc12ec29ea3dc041d177b85cdae8]
+cluster ohm.softa.a10.kitchen.workers--><polygon fill="#FFFFFF" filter="url(#fx3l3a9xzp7dw)" points="16,142,240,142,247,164.4883,534,164.4883,534,293,16,293,16,142" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="247" y1="164.4883" y2="164.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="218" x="20" y="157.5352">ohm.softa.a10.kitchen.workers</text><!--MD5=[53ae8b34bebe44116eb8626f99f3fe78]
+class Runnable--><rect codeLine="3" fill="#FEFECE" filter="url(#fx3l3a9xzp7dw)" height="60.9551" id="Runnable" style="stroke:#A80036;stroke-width:1.5;" width="86" x="232" y="41"/><ellipse cx="247" cy="57" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M243.4277,53.2651 L243.4277,51.1069 L250.8071,51.1069 L250.8071,53.2651 L248.3418,53.2651 L248.3418,61.3418 L250.8071,61.3418 L250.8071,63.5 L243.4277,63.5 L243.4277,61.3418 L245.8931,61.3418 L245.8931,53.2651 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="54" x="261" y="61.5352">Runnable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="233" x2="317" y1="73" y2="73"/><line style="stroke:#A80036;stroke-width:1.5;" x1="233" x2="317" y1="81" y2="81"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="30" x="238" y="95.6348">run();</text><!--MD5=[b7d54dec3b9b13fa2654889fd1fe387d]
+class Cook--><rect codeLine="9" fill="#FEFECE" filter="url(#fx3l3a9xzp7dw)" height="99.8203" id="Cook" style="stroke:#A80036;stroke-width:1.5;" width="485" x="32.5" y="177"/><ellipse cx="250.75" cy="193" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M253.2231,199.1431 Q252.6421,199.4419 252.0029,199.5913 Q251.3638,199.7407 250.6582,199.7407 Q248.1514,199.7407 246.8315,198.0889 Q245.5117,196.437 245.5117,193.3159 Q245.5117,190.1865 246.8315,188.5347 Q248.1514,186.8828 250.6582,186.8828 Q251.3638,186.8828 252.0112,187.0322 Q252.6587,187.1816 253.2231,187.4805 L253.2231,190.2031 Q252.5923,189.6221 251.9988,189.3523 Q251.4053,189.0825 250.7744,189.0825 Q249.4297,189.0825 248.7449,190.1492 Q248.0601,191.2158 248.0601,193.3159 Q248.0601,195.4077 248.7449,196.4744 Q249.4297,197.541 250.7744,197.541 Q251.4053,197.541 251.9988,197.2712 Q252.5923,197.0015 253.2231,196.4204 Z " fill="#000000"/><ellipse cx="276.25" cy="192.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="282.25" y="197.5352">Cook</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33.5" x2="516.5" y1="209" y2="209"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="40.5" y="217"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="52.5" y="223.6348">name: String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="40.5" y="229.9551"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="197" x="52.5" y="236.5898">progressReporter: ProgressReporter</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="40.5" y="242.9102"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="52.5" y="249.5449">kitchenHatch: KitchenHatch</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33.5" x2="516.5" y1="255.8652" y2="255.8652"/><ellipse cx="43.5" cy="266.8652" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="459" x="52.5" y="270.5">Cook(name: String, kitchenHatch: KitchenHatch, progressReporter: ProgressReporter)</text><!--MD5=[b4ece32a116dfa8f3d5b61a562b99f16]
+reverse link Runnable to Cook--><path d="M275,122.12 C275,139.66 275,159.37 275,176.86 " fill="none" id="Runnable-backto-Cook" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="268,122.1,275,102.1,282,122.1,268,122.1" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[25076b08aaced4b310aa1eede1abfcd6]
+@startuml Cook
+
+package java.lang {
+    interface Runnable {
+        run();
+    }
+}
+
+package ohm.softa.a10.kitchen.workers {
+    +class Cook implements Runnable {
+        -name: String
+        -progressReporter: ProgressReporter
+        -kitchenHatch: KitchenHatch
+        +Cook(name: String, kitchenHatch: KitchenHatch, progressReporter: ProgressReporter)
+    }
+}
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 14:40:07 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

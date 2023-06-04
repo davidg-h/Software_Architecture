@@ -1,0 +1,20 @@
+@startuml KitchenHatch
+
+package ohm.softa.a10.kitchen {
+    +interface KitchenHatch {
+        getMaxDishes(): int
+        getOrderCount(): int
+        getDishesCount(): int
+        dequeueOrder(): Order
+        dequeueOrder(timeout: long): Order
+        dequeueDish(): Dish
+        dequeueDish(timeout: long): Dish
+        enqueueDish(dish: Dish)
+    }
+
+    +class KitchenHatchImpl implements KitchenHatch {
+        +KitchenHatchImpl(maxMeals: int, orders: Deque<Order>)
+    }
+}
+
+@enduml

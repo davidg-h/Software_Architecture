@@ -1,0 +1,19 @@
+@startuml Waiter
+
+package java.lang {
+    interface Runnable {
+        run();
+    }
+}
+
+package ohm.softa.kitchen.workers {
+
+    +class Waiter implements Runnable {
+        -name: String
+        -progressReporter: ProgressReporter
+        -kitchenHatch: KitchenHatch
+        +Waiter(name: String, kitchenHatch: KitchenHatch, progressReporter: ProgressReporter)
+    }
+}
+
+@enduml
