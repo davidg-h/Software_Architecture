@@ -1,0 +1,38 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+// Define the main class for the application
+mainClassName = 'ohm.softa.a11.App'
+
+dependencies {
+    /* Commons Lang3 */
+    implementation ("org.apache.commons:commons-lang3:${commons_lang_version}")
+
+    /* Retrofit */
+    implementation("com.squareup.retrofit2:retrofit:${retrofit2_version}")
+    implementation("com.squareup.retrofit2:converter-gson:${retrofit2_version}")
+	implementation 'org.webjars.npm:stdout-stream:1.4.1'
+
+	/* JUnit 5 */
+	testCompile("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+	testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+	testRuntime("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
+    testImplementation("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+    testRuntime("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
