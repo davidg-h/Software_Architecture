@@ -1,0 +1,10 @@
+@startuml StreamFlow
+
+(*) --> "Filter for non null objects"
+--> "Skip as many values as required"
+--> "Limit the stream to the required count of elements"
+--> "use `map` to unwrap the `ResponseWrapper`"
+--> "Print the jokes to the STDOUT"
+--> (*)
+
+@enduml

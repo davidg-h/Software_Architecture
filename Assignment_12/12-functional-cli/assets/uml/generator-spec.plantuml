@@ -1,0 +1,27 @@
+@startuml GeneratorSpec
+left to right direction
+package java.util.function {
+    interface Supplier<T> {
+        T get();
+    }
+}
+
+package ohm.softa.a12.icndb {
+    class JokeGenerator {
+        +randomJokesStream(): Stream<ResponseWrapper<JokeDto>>
+        +jokesStream(): Stream<ResponseWrapper<JokeDto>>
+    }
+
+    package suppliers {
+        class AllJokesSupplier implements Supplier {
+        }
+
+        class RandomJokeSupplier implements Supplier {
+        }
+    }
+
+    JokeGenerator -- AllJokesSupplier : "uses"
+    JokeGenerator -- RandomJokeSupplier : "uses"
+}
+
+@enduml
