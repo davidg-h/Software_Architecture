@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.ben-manes.versions" version "0.20.0"
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+mainClassName = 'App'
+
+dependencies {
+    /* Commons Lang3 */
+    compile "org.apache.commons:commons-lang3:$commons_lang_version"
+
+    /* GSON */
+    compile "com.google.code.gson:gson:$gson_version"
+
+    /* JUnit 5 */
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junit_version}")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junit_version}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:${junit_version}")
+    testImplementation("org.apache.logging.log4j:log4j-core:${log4j_version}")
+    testRuntime("org.apache.logging.log4j:log4j-jul:${log4j_version}")
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+
+    }
+}

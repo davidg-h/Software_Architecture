@@ -1,0 +1,11 @@
+@startuml GeneratorSpec
+
+package ohm.softa.a13.tweets {
+
+        +class TweetStreamGenerator {
+                -{static}fromJson(path: String): TweetStreamGenerator
+                +getTweetsStream(): Stream<Tweet>
+        }
+}
+
+@enduml
