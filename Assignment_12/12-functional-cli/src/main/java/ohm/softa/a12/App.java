@@ -1,22 +1,14 @@
 package ohm.softa.a12;
 
-import ohm.softa.a12.icndb.JokeGenerator;
+import ohm.softa.a12.cnjdb.JokeGenerator;
 import ohm.softa.a12.model.JokeDto;
-import ohm.softa.a12.model.ResponseWrapper;
 
 import java.util.Scanner;
 import java.util.stream.Stream;
 
 public abstract class App {
 
-    /**
-     * Scanner to read input from the STDIN
-     */
     private static final Scanner inputScanner = new Scanner(System.in);
-
-    /**
-     * Stream generator
-     */
     private static final JokeGenerator jokeGenerator = new JokeGenerator();
 
     public static void main(String[] args) {
@@ -24,21 +16,20 @@ public abstract class App {
         int jokeCount;
         int skipCount;
 
-        /* loop until the the user wants to quit */
+        /* loop until the user wants to quit */
         do {
             jokeCount = readInt("How many jokes do you want?");
             skipCount = readInt("How many jokes do you want to skip");
 
-            Stream<ResponseWrapper<JokeDto>> jokesSource = readJokeSource();
+            Stream<JokeDto> jokesSource = readJokeSource();
 
-			jokesSource.filter(elem -> elem != null)
-					.skip(skipCount)
-					.limit(jokeCount)
-					.map(response -> response.getValue())
-					.map(joke -> joke.getJoke())
-					.forEach(System.out::println);
+			jokesSource.filter(elem -> elem != null && elem.getValue().length() <= 80)
+						.skip(skipCount)
+						.limit(jokeCount)
+						.map(joke -> joke.getValue())
+						.forEach(System.out::println);
 
-            System.out.println("If you want to quit press [Q] otherwise press [C] to continue.");
+            System.out.println("\nIf you want to quit press [Q] otherwise press [C] to continue.");
             var input = inputScanner.next();
             if (input.equals("q") || input.equals("Q")) {
                 shouldQuit = true;
@@ -71,10 +62,10 @@ public abstract class App {
      *
      * @return stream of JokeDtos wrapped in ResponseWrapper objects
      */
-    private static Stream<ResponseWrapper<JokeDto>> readJokeSource() {
+    private static Stream<JokeDto> readJokeSource() {
         System.out.println("Which joke source do you want to use?");
         System.out.println("1) Random jokes");
-        System.out.println("2) Linear by id");
+        System.out.println("2) All jokes");
 
         do {
             try {
@@ -83,7 +74,7 @@ public abstract class App {
                     case 1:
                         return jokeGenerator.randomJokesStream();
                     default:
-                        return jokeGenerator.jokesStream();
+                        return jokeGenerator.allJokesStream();
                 }
             } catch (Exception e) {
                 System.out.println("No valid selection");
